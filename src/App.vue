@@ -69,7 +69,7 @@
         @close='modalValidate = false'
     >
       <div slot='body'>
-        <ModalValidate :modalValidate='modalValidate' />
+        <ModalValidate :closeModalValidate='closeModalValidate' />
       </div>
     </Modal>
   </div>
@@ -103,6 +103,9 @@ export default Vue.extend({
       this.secondModal.email = ''
       this.secondModal.name = ''
       this.secondModal.show = false
+    },
+    closeModalValidate(){
+      this.modalValidate = false
     }
   }
 })

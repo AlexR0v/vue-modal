@@ -56,7 +56,7 @@ import { required, minLength, email } from 'vuelidate/lib/validators'
 
 export default Vue.extend({
   name: 'ModalValidate',
-  props:['modalValidate'],
+  props:['closeModalValidate'],
   data() {
     return {
       name: '',
@@ -85,7 +85,7 @@ export default Vue.extend({
         this.email = ''
         this.name = ''
         this.$v.$reset()
-        this.modalValidate = false
+        this.closeModalValidate()
       }
     }
   }
