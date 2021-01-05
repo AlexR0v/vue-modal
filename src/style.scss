@@ -1,0 +1,21 @@
+.container{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.btn {
+  display: inline-block;
+  padding: .8em 2.6em;
+  margin: 20px 0;
+  line-height: 1;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 30px;
+  outline: none;
+
+  &.btn_primary {
+    color: #ffffff;
+    border: 1px solid #494ce8;
+    background-color: #494ce8;
+  }
+}

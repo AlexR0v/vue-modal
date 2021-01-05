@@ -1,29 +1,35 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <div class='container'>
+    <button
+        class='btn btn_primary'
+        @click='firstModal = !firstModal'
+    >Modal First
+    </button>
+    <Modal
+        v-if='firstModal'
+        title='My Modal'
+    />
   </div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
+<script lang='ts'>
+import Vue from 'vue'
+import Modal from '@/components/Modal.vue'
 
 export default Vue.extend({
   name: 'App',
-  components: {
-    HelloWorld
+  components: {Modal},
+  data() {
+    return {
+      firstModal: false
+    }
   }
-});
+})
 </script>
 
-<style lang="scss">
-#app {
+<style lang='scss'>
+body {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
